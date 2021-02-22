@@ -9,8 +9,8 @@ import java.lang.Exception
 
 class BooksViewModel: ViewModel() {
     private val firestoreService = FirestoreService()
-    val books = MutableLiveData< ArrayList<Book> >()
-    val isLoading = MutableLiveData< Boolean >()
+    private val books = MutableLiveData< ArrayList<Book> >()
+    private val isLoading = MutableLiveData< Boolean >()
 
     fun refresh() {
         getBooks()
@@ -30,7 +30,7 @@ class BooksViewModel: ViewModel() {
             override fun onSuccess( result: Book ) {
                 val listBook = books.value
                 listBook?.add( book )
-                if (listBook != null) updateBooks( listBook )
+                if (listBook != null) refreshBooksValue( listBook )
             }
 
             override fun onFailed(exception: Exception) {
@@ -43,7 +43,7 @@ class BooksViewModel: ViewModel() {
     private fun getBooks() {
         firestoreService.getBooks( object: Callback< ArrayList<Book> > {
             override fun onSuccess( result: ArrayList<Book> ) {
-                updateBooks( result )
+                refreshBooksValue( result )
             }
 
             override fun onFailed(exception: Exception) {
@@ -57,7 +57,7 @@ class BooksViewModel: ViewModel() {
             override fun onSuccess( result: Book ) {
                 val listBook = books.value
                 listBook?.set( position, result )
-                if (listBook != null) updateBooks( listBook )
+                if (listBook != null) refreshBooksValue( listBook )
 
             }
 
@@ -74,7 +74,7 @@ class BooksViewModel: ViewModel() {
             override fun onSuccess(result: String) {
                 val listBook = books.value
                 listBook?.remove( book )
-                if (listBook != null) updateBooks( listBook )
+                if (listBook != null) refreshBooksValue( listBook )
             }
 
             override fun onFailed(exception: Exception) {
@@ -88,7 +88,7 @@ class BooksViewModel: ViewModel() {
         isLoading.value = true
     }
 
-    private fun updateBooks( value: ArrayList<Book> ) {
+    private fun refreshBooksValue(value: ArrayList<Book> ) {
         books.postValue( value )
         processFinished()
     }
