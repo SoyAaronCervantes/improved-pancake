@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.soyaaroncervantes.proyectofinalbasico.R
 import com.soyaaroncervantes.proyectofinalbasico.model.Book
 
-class BookAdapter( private val bookListener: BookListener ): RecyclerView.Adapter< BookAdapter.ViewHolder >() {
+class BooksAdapter(private val booksListener: BooksListener ): RecyclerView.Adapter< BooksAdapter.ViewHolder >() {
   private val books = arrayListOf<Book>()
 
   override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder = ViewHolder( LayoutInflater
