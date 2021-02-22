@@ -1,7 +1,8 @@
-package com.soyaaroncervantes.proyectofinalbasico
+package com.soyaaroncervantes.proyectofinalbasico.view.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.soyaaroncervantes.proyectofinalbasico.R
 
 class MainActivity : AppCompatActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
