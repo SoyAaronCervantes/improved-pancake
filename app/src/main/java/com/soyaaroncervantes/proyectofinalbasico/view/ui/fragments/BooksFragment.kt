@@ -8,12 +8,12 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import com.soyaaroncervantes.proyectofinalbasico.R
 import com.soyaaroncervantes.proyectofinalbasico.model.Book
-import com.soyaaroncervantes.proyectofinalbasico.view.adapter.BookAdapter
-import com.soyaaroncervantes.proyectofinalbasico.view.adapter.BookListener
+import com.soyaaroncervantes.proyectofinalbasico.view.adapter.BooksAdapter
+import com.soyaaroncervantes.proyectofinalbasico.view.adapter.BooksListener
 import com.soyaaroncervantes.proyectofinalbasico.viewModel.BooksViewModel
 
-class BooksFragment : Fragment(), BookListener {
-    private lateinit var bookAdapter: BookAdapter
+class BooksFragment : Fragment(), BooksListener {
+    private lateinit var booksAdapter: BooksAdapter
     private lateinit var booksViewModel: BooksViewModel
 
     override fun onCreateView( inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle? ): View? {
@@ -25,7 +25,7 @@ class BooksFragment : Fragment(), BookListener {
         booksViewModel = ViewModelProvider( this ).get( BooksViewModel::class.java )
         booksViewModel.refresh()
 
-        bookAdapter = BookAdapter( this )
+        booksAdapter = BooksAdapter( this )
 
     }
 
