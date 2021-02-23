@@ -7,10 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import com.soyaaroncervantes.proyectofinalbasico.R
 
-class HomeFragment : Fragment() {
+class BookFragment : Fragment() {
 
     override fun onCreateView( inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle? ): View? {
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        return inflater.inflate(R.layout.fragment_book, container, false)
     }
 
 }
