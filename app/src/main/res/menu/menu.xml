@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/navHomeFragment" android:title="@string/inicio" android:icon="@drawable/ic_home"/>
+    <item android:id="@+id/navBookFragment" android:title="@string/agregar_libro" android:icon="@drawable/ic_library_books"/>
+    <item android:id="@+id/navBooksFragment" android:title="@string/biblioteca" android:icon="@drawable/ic_add"/>
+</menu>
