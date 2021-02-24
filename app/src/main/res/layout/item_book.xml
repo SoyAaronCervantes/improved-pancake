@@ -20,7 +20,7 @@
                 android:id="@+id/imageViewBook"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/ic_library_books" />
+                android:src="@drawable/ic_book" />
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="wrap_content"
@@ -35,20 +35,36 @@
                     android:textSize="@dimen/bookTitle1"
                     android:text="Nombre del libro" />
 
-                <TextView
-                    android:id="@+id/textViewAuthorBook"
-                    android:layout_width="wrap_content"
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/bookSubtitle1"
-                    android:text="Autor del libro" />
+                    android:layout_marginVertical="@dimen/smallSpaceForBookDetail"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
 
+                    <TextView
+                        android:id="@+id/textViewAuthorBook"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/bookSubtitle1"
+                        android:textStyle="bold"
+                        android:text="Autor del libro" />
 
-                <TextView
-                    android:id="@+id/textViewPagesBook"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="@dimen/bookSubtitle2"
-                    android:text="Páginas del libro" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/smallSpaceForBookDetail"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/textViewPagesBook"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/bookSubtitle2"
+                        android:text="Páginas" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
