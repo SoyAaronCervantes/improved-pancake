@@ -1,10 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spaceForBookItemContent"
+        android:elevation="5dp"
+        app:cardCornerRadius="@dimen/cardCornerRadius">
 
-    </LinearLayout>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spaceForBookDetail"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageViewBook"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_library_books" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/spaceForBookDetail"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewTitleBook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/bookTitle1"
+                    android:text="Nombre del libro" />
+
+                <TextView
+                    android:id="@+id/textViewAuthorBook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/bookSubtitle1"
+                    android:text="Autor del libro" />
+
+
+                <TextView
+                    android:id="@+id/textViewPagesBook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/bookSubtitle2"
+                    android:text="Páginas del libro" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
 </layout>
