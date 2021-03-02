@@ -5,4 +5,11 @@
     <string name="inicio">Inicio</string>
     <string name="biblioteca">Biblioteca</string>
     <string name="agregar_libro">Agregar Libro</string>
+    <string name="addNewBook_BookName">Book Name</string>
+    <string name="addNewBook_BookAuthor">Author</string>
+    <string name="addNewBook_BookPublishingHouse">Publishing House</string>
+    <string name="addNewBook_BookPages">Book Pages</string>
+    <string name="addNewBook_BookResume">Book resume</string>
+    <string name="addNewBook_BookSubmitButton">Add Book</string>
+    <string name="toolbarText">Books App</string>
 </resources>

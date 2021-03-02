@@ -6,6 +6,8 @@
     <dimen name="spaceForBookItemContent">20dp</dimen>
     <dimen name="spaceForBookDetail">10dp</dimen>
     <dimen name="smallSpaceForBookDetail">5dp</dimen>
+    <dimen name="bookImage">100dp</dimen>
+    <dimen name="bookImageDetail">110dp</dimen>
     <dimen name="bookTitle1">30sp</dimen>
     <dimen name="bookSubtitle1">20sp</dimen>
     <dimen name="bookSubtitle2">15sp</dimen>
