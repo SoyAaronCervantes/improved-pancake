@@ -51,7 +51,7 @@ class FirestoreService: BookCRUD {
 
     override fun updateBook( book: Book, callback: Callback< Book > ) {
         bookCollectionFirestore
-            .document( book.id.toString() )
+            .document( book.id )
             .set( book, SetOptions.merge() )
             .addOnSuccessListener{
                 callback.onSuccess( book )
