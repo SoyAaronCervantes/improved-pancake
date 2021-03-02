@@ -8,9 +8,9 @@ import com.soyaaroncervantes.proyectofinalbasico.network.FirestoreService
 import java.lang.Exception
 
 class BooksViewModel: ViewModel() {
-    private val firestoreService = FirestoreService()
-    private val books = MutableLiveData< ArrayList<Book> >()
-    private val isLoading = MutableLiveData< Boolean >()
+    val firestoreService = FirestoreService()
+    val books = MutableLiveData< ArrayList<Book> >()
+    val isLoading = MutableLiveData< Boolean >()
 
     fun refresh() {
         getBooks()
