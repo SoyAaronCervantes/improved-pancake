@@ -18,8 +18,8 @@
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/imageViewBook"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="@dimen/bookImage"
+                android:layout_height="@dimen/bookImage"
                 android:src="@drawable/ic_book" />
 
             <androidx.appcompat.widget.LinearLayoutCompat
@@ -65,10 +65,10 @@
 
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
-
             </androidx.appcompat.widget.LinearLayoutCompat>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
     </androidx.cardview.widget.CardView>
+
 </layout>

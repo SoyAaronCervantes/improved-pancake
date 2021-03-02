@@ -7,11 +7,117 @@
         android:layout_height="match_parent"
         tools:context=".view.ui.fragments.BookDetailFragment">
 
-        <!-- TODO: Update blank fragment layout -->
-        <TextView
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment" />
+            android:layout_height="wrap_content">
+
+            <Toolbar
+                android:id="@+id/toolbarConference"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spaceForBookItemContent"
+            android:layout_marginTop="60dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imageViewBook"
+                        android:layout_width="@dimen/bookImageDetail"
+                        android:layout_height="@dimen/bookImageDetail"
+                        android:src="@drawable/ic_book" />
+
+                    <!--  Author, name and pages  -->
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/spaceForBookDetail"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textViewBookDetailName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nombre del libro"
+                            android:textSize="@dimen/bookTitle1" />
+
+                        <!--  Author & Pages  -->
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/smallSpaceForBookDetail"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textViewBookDetailAuthor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Autor del libro"
+                                android:textSize="@dimen/bookSubtitle1"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/smallSpaceForBookDetail"
+                                android:text="-" />
+
+                            <TextView
+                                android:id="@+id/textViewBookDetailPages"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Páginas"
+                                android:textSize="@dimen/bookSubtitle2" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/bookTitle1"
+                    android:layout_marginTop="@dimen/smallSpaceForBookDetail"
+                    android:text="Resume:"/>
+
+
+                <TextView
+                    android:id="@+id/textViewBookDetailResume"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/spaceForBookDetail"
+                    android:text="Book Resume"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/compatButtonBookDetailButton"
+                    android:background="@color/teal_700"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="5dp"
+                    android:paddingHorizontal="15dp"
+                    android:text="Go to Website"
+                    android:textColor="@color/white"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </ScrollView>
 
     </FrameLayout>
 </layout>
