@@ -6,7 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RelativeLayout
+import androidx.core.os.bundleOf
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -53,6 +55,7 @@ class BooksFragment : Fragment(), BooksListener {
     }
 
     override fun onBookClick(book: Book, position: Int) {
-        TODO("Not yet implemented")
+        val bundle = bundleOf("book" to book )
+        findNavController().navigate( R.id.bookDetailFragment, bundle )
     }
 }
