@@ -1,5 +1,9 @@
 package com.soyaaroncervantes.proyectofinalbasico.model
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class Book(
   val name: String,
   val author: String,
@@ -10,6 +14,6 @@ data class Book(
   val website: String,
   val image: String,
   var id: String
-  ) {
+  ) : Parcelable {
   constructor() : this("", "", 0, "", 1, "", "", "", "" )
 }
